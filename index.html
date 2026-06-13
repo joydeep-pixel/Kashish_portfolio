@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kashish Sharma | Video Editing Services</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">Kashish <span>Sharma</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#work">My Work</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Professional Video Editing Services</h1>
+            <p>Hello, I’m <span class="highlight-name">Kashish</span> — a creative video editor & designer.</p>
+            <div class="hero-buttons">
+               
+            </div>
+        </div>
+        <div class="logo"><img src="logo.jpeg" alt="mylogo" width="400"></div>
+
+    </section>
+
+    <!-- Services Section -->
+   
+    <section id="services" class="services">
+        <h2 class="section-title">My Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-images"></i>
+                </div>
+                <h3>Poster Design</h3>
+                <p>Eye-catching posters for events, movies, promotions, and social media</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-scroll"></i>
+                </div>
+                <h3>Banner Design</h3>
+                <p>Professional banners for YouTube, websites, and advertising campaigns</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fab fa-youtube"></i>
+                </div>
+                <h3>YouTube Thumbnails</h3>
+                <p>Click-worthy thumbnails that increase your video views and engagement</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-video"></i>
+                </div>
+                <h3>Video Editing</h3>
+                <p>Professional video editing for YouTube, ads, weddings, and more</p>
+            </div>
+        </div>
+    </section>
+    <section id="work" class="portfolio">
+        <h2 class="section-title">My Work</h2>
+        <div class="hero-visual">
+            <div class="floating-card card-1" onclick="openGallery('posters')">
+                <i class="fas fa-images"></i>
+                <span>Posters</span>
+            </div>
+
+            <div class="floating-card card-2" onclick="openGallery('banners')">
+                <i class="fas fa-scroll"></i>
+                <span>Banners</span>
+            </div>
+
+            <div class="floating-card card-3" onclick="openGallery('thumbnails')">
+                <i class="fab fa-youtube"></i>
+                <span>Thumbnails</span>
+            </div>
+
+            <div class="floating-card card-4" onclick="openGallery('videos')">
+                <i class="fas fa-video"></i>
+                <span>Videos</span>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <!-- <img src="/posters/img1.jpeg" alt=""> -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Let's Work Together</h3>
+                <p>Have a project in mind? Contact me for professional video editing services!</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>kashishsharma26120@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>India</span>
+                    </div>
+                </div>
+            </div>
+            <form class="contact-form" id="contactForm" name="contact" method="POST" data-netlify="true">
+                <input type="hidden" name="form-name" value="contact">
+
+                <input type="text" name="name" placeholder="Your Name" required>
+
+                <input type="email" name="email" placeholder="Your Email" required>
+
+                <select name="service" required>
+                    <option value="">Select Service</option>
+                    <option value="poster">Poster Design</option>
+                    <option value="banner">Banner Design</option>
+                    <option value="thumbnail">YouTube Thumbnail</option>
+                    <option value="video">Video Editing</option>
+                    <option value="other">Other Service</option>
+                </select>
+
+                <textarea name="message" placeholder="Describe your project..." rows="5" required></textarea>
+
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                Kashish <span>Sharma</span>
+            </div>
+
+            <p class="footer-text">
+                Professional Video Editing • Posters • Banners • Thumbnails
+            </p>
+
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/_.krishnadevotee._/" target="_blank" rel="noopener">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+
+            <p class="footer-copy">
+                © 2026 Kashish Sharma. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+    <!-- Gallery Modal -->
+    <div class="gallery-modal" id="galleryModal">
+        <div class="gallery-content" onclick="event.stopPropagation()">
+            <span class="gallery-close" onclick="closeGallery()">×</span>
+            <h3 id="galleryTitle">Gallery</h3>
+            <div class="gallery-grid" id="galleryGrid"></div>
+        </div>
+    </div>
+
+    <!-- Full Image Viewer -->
+    <div class="image-viewer" id="imageViewer">
+        <span class="image-close" onclick="closeImageViewer()">×</span>
+        <img id="viewerImage" src="" alt="Full view" />
+    </div>
+    <script src="script.js"></script>
+    <!-- Image Viewer -->
+</body>
+
+</html>

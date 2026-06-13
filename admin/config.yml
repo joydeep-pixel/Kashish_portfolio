@@ -1,0 +1,47 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "content"
+    label: "Website Content"
+    files:
+      - label: "Gallery"
+        name: "gallery"
+        file: "data/gallery.json"
+        fields:
+          - label: "Posters"
+            name: "posters"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string", required: false }
+              - { label: "Image", name: "image", widget: "image" }
+
+          - label: "Banners"
+            name: "banners"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string", required: false }
+              - { label: "Image", name: "image", widget: "image" }
+
+          - label: "Thumbnails"
+            name: "thumbnails"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string", required: false }
+              - { label: "Image", name: "image", widget: "image" }
+
+          - label: "Videos"
+            name: "videos"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string", required: false }
+              - { label: "Upload small MP4", name: "video_file", widget: "file", required: false, hint: "Use this only for small videos." }
+              - { label: "Video URL", name: "video_url", widget: "string", required: false, hint: "For big videos, paste YouTube/Cloudinary/Drive URL here." }

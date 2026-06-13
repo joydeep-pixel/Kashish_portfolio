@@ -1,0 +1,41 @@
+{
+  "posters": [
+    {
+      "title": "Poster 1",
+      "image": "/posters/img1.jpeg"
+    },
+    {
+      "title": "Poster 2",
+      "image": "/posters/img2.jpeg"
+    },
+    {
+      "title": "Poster 3",
+      "image": "/posters/img3.jpeg"
+    },
+    {
+      "title": "Poster 4",
+      "image": "/posters/img4.jpeg"
+    },
+    {
+      "title": "Poster 5",
+      "image": "/posters/img5.jpeg"
+    }
+  ],
+  "banners": [],
+  "thumbnails": [
+    {
+      "title": "Thumbnail 1",
+      "image": "/thumbnails/thumb3.jpeg"
+    }
+  ],
+  "videos": [
+    {
+      "title": "Video 1",
+      "video_file": "/videos/video1.mp4"
+    },
+    {
+      "title": "Video 2",
+      "video_file": "/videos/video2.mp4"
+    }
+  ]
+}
